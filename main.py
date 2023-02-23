@@ -82,9 +82,9 @@ def analysis(food: Food):
         for key, value in dataset.items():
             if key in ingredients:
                 if value[1] < 0:
-                    response.bad_ingrediants.append({key: value[0]})
+                    response.bad_ingrediants.append([key,value[0]])
                 else:
-                    response.good_ingrediants.append({key: value[0]})
+                    response.good_ingrediants.append([key, value[0]])
 
         if food.nutrition is None:
             return response
