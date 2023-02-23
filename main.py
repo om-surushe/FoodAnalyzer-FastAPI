@@ -43,7 +43,7 @@ def extract_quantity(string):
         return None
 
 
-@app.get("/")
+@app.post("/")
 def analysis(food: Food):
     try:
         response = FoodResponse()
